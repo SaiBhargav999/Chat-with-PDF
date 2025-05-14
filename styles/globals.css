@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+
+    --ring: 217.2 32.6% 17.5%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+html,
+body,
+#__next {
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes glitter {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.animate-glitter {
+  animation: glitter 2s linear infinite;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+  background-size: 20px 20px;
+}
+
+.no-zoom {
+  font-size: 16px;
+  max-height: 100px;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.element {
+  animation: cssAnimation_0 1351ms infinite ease;
+}
+
+@keyframes cssAnimation_0 {
+  from {
+    border: 0px solid rgba(100, 100, 100, 1); border-radius: 4px;
+  }
+
+  to {
+    border: 7px hidden rgba(99, 99, 99, 1);
+    border-radius: 4px;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
+
+svg {
+	font-family: "Mochiy Pop One", sans-serif;
+	width: 100%; height: 100%;
+}
+svg text {
+	animation: stroke 6s infinite alternate;
+	stroke-width: 2vw;
+	stroke: #3160A0;
+	font-size: 12vw;
+  text-anchor: middle;
+}
+
+@keyframes stroke {
+	0%   {
+		fill: rgba(78,172,204,0); stroke: rgba(49,96,160,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(78,172,204,0); stroke: rgba(49,96,160,1); }
+	80%  {fill: rgba(78,172,204,0); stroke: rgba(49,96,160,1); stroke-width: 3; }
+	100% {
+		fill: rgba(78,172,204,1); stroke: rgba(49,96,160,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+.button {
+  background-color: #008CBA;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: transform 0.4s, box-shadow 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button2 {
+  background-color: rgb(0, 0, 0);
+  color: #ffffffcb;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #009ed2;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
